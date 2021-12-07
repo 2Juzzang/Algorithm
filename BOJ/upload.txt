@@ -1,0 +1,2 @@
+백준 업로드시 이 코드 넣기
+const input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
