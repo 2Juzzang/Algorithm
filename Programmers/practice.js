@@ -1,5 +1,9 @@
 function solution(n) {
-  let root = Math.sqrt(n);
-  return root - parseInt(root) === 0 ? (root + 1) ** 2 : -1;
+  let answer = String(n)
+    .split('')
+    .sort((a, b) => b - a)
+    .join('');
+  answer = Number(answer);
+  return answer;
 }
-solution(11);
+solution(118372);
