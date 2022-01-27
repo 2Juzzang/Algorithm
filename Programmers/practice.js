@@ -1,9 +1,14 @@
-function solution(arr, divisor) {
-  var answer = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % divisor === 0) {
-      answer.push(arr[i]);
+function solution(lottos, win_nums) {
+  let win = 0;
+  let zero = 0;
+  for (let i = 0; i < lottos.length; i++) {
+    if (win_nums.includes(lottos[i])) {
+      win++;
+    }
+    if (lottos[i] === 0) {
+      zero++;
     }
   }
-  return answer.length == 0 ? [-1] : answer.sort((a, b) => a - b);
+  const rank = [6, 6, 5, 4, 3, 2, 1];
+  return [rank[win + zero], rank[win]];
 }
